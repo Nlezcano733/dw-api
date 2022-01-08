@@ -2,12 +2,16 @@
 	"name": "digital-world-admin",
 	"version": "0.1.0",
 	"description": "Back end from digital-world",
-	"main": "app.ts",
+	"main": "dist/app.js",
 	"scripts": {
 		"start": "node dist/app.js",
 		"dev": "nodemon",
 		"build": "tsc",
-		"clean": "del dist"
+		"clean": "del dist",
+		"deploy": "git push heroku main"
+	},
+	"engines": {
+		"node": "14.x"
 	},
 	"author": "nlezcano",
 	"license": "MIT",
