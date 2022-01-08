@@ -1,6 +1,9 @@
 import express, { Express } from "express";
 import methodOverride from 'method-override';
-require("dotenv").config();
+
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config();
+}
 
 // Routes import
 import products from "./src/routes/products";
